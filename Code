@@ -69,3 +69,15 @@ class Order:
     def __str__(self):
         items_str = "\n".join([str(item) for item in self._items])
         return f"\nOrder Summary:\n{'='*20}\nOrder Date: {self.__order_date}\nItems:\n{items_str}\n{'-'*20}\nTotal Price: ${self.__total_price:.2f}\n{'='*20}"
+
+class Discount:
+    """
+    Represents a discount that can be applied to an order.
+    """
+
+    def __init__(self, discount_type, discount_rate):
+        self.__discount_type = discount_type
+        self.__discount_rate = discount_rate
+
+    def apply_discount(self, order):
+        return order.calculate_total() * (1 - self.__discount_rate)
