@@ -32,4 +32,6 @@ class Customer:
         self.__loyalty_member = loyalty_member
         self.shopping_cart = ShoppingCart()
 
+    def __str__(self):
+        return f"Customer: {self.__name}, Contact Info: {self.__contact_info}, Loyalty Member: {self.__loyalty_member}"
 
