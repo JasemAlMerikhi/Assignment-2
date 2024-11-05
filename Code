@@ -9,3 +9,12 @@ class Ebook:
         self.__publication_date = publication_date
         self.__genre = genre
         self.__price = price
+
+    def get_details(self):
+        return f"Title: {self.__title}, Author: {self.__author}, Genre: {self.__genre}, Price: ${self.__price:.2f}"
+
+    def __str__(self):
+        return self.get_details(
+
+    def get_price(self):
+        return self.__price
