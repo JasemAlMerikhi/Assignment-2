@@ -18,3 +18,18 @@ class Ebook:
 
     def get_price(self):
         return self.__price
+
+
+class Customer:
+    """
+    Represents a customer with name, contact information, and loyalty membership status.
+    Each customer has an associated shopping cart.
+    """
+
+    def __init__(self, name, contact_info, loyalty_member=False):
+        self.__name = name
+        self.__contact_info = contact_info
+        self.__loyalty_member = loyalty_member
+        self.shopping_cart = ShoppingCart()
+
+
