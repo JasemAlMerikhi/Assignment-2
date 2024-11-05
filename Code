@@ -137,3 +137,10 @@ print("Test Case 4: Discount Applied")
 print("="*30)
 print(f"Loyalty Discount (10%): ${total_after_loyalty_discount:.2f}")
 print("="*30 + "\n")
+
+# Test Case 5: Generate Invoice
+invoice = Invoice(order)
+print("Test Case 5: Invoice Generation")
+print("="*30)
+print(invoice)
+print("="*30 + "\n")
