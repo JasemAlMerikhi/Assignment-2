@@ -50,6 +50,22 @@ class ShoppingCart:
         return sum(item.get_price() for item in self._items)
 
     def __str__(self):
-        items_st = "\n".join([str(item) for item in self._items])
+        items_str = "\n".join([str(item) for item in self._items])
         return f"\nShopping Cart:\n{'-'*20}\n{items_str}\n{'-'*20}\nTotal Price: ${self.get_total_price():.2f}"
 
+class Order:
+    """
+    Represents a finalized order, containing the order date, items, and total price.
+    """
+
+    def __init__(self, order_date, items):
+        self.__order_date = order_date
+        self._items = items
+        self.__total_price = self.calculate_total()
+
+    def calculate_total(self):
+        return sum(item.get_price() for item in self._items)
+
+    def __str__(self):
+        items_str = "\n".join([str(item) for item in self._items])
+        return f"\nOrder Summary:\n{'='*20}\nOrder Date: {self.__order_date}\nItems:\n{items_str}\n{'-'*20}\nTotal Price: ${self.__total_price:.2f}\n{'='*20}"
