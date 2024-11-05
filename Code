@@ -111,3 +111,13 @@ print(ebook1)
 print(ebook2)
 print("="*30 + "\n")
 
+# Test Case 2: Customer Shopping Cart
+customer = Customer("Fahad", "Fahad@example.com", loyalty_member=True)
+customer.shopping_cart.add_item(ebook1)
+customer.shopping_cart.add_item(ebook2)
+
+print("Test Case 2: Customer Shopping Cart")
+print("="*30)
+print(customer)
+print(customer.shopping_cart)
+print("="*30 + "\n")
