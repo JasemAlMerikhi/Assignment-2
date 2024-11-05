@@ -121,3 +121,13 @@ print("="*30)
 print(customer)
 print(customer.shopping_cart)
 print("="*30 + "\n")
+
+# Test Case 3: Order Summary
+order = Order("2023-11-05", customer.shopping_cart._items)
+
+print("Test Case 3: Order Summary")
+print("="*30)
+print(order)
+print("="*30 + "\n")
+print()
+
