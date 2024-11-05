@@ -35,3 +35,13 @@ class Customer:
     def __str__(self):
         return f"Customer: {self.__name}, Contact Info: {self.__contact_info}, Loyalty Member: {self.__loyalty_member}"
 
+class ShoppingCart:
+    """
+    Represents a shopping cart containing e-books for purchase.
+    """
+
+    def __init__(self):
+        self._items = []
+
+    def add_item(self, ebook):
+        self._items.append(ebook)
