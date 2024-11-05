@@ -99,5 +99,15 @@ class Invoice:
         items_str = "\n".join([str(item) for item in self.__order._items])
         return f"\nInvoice:\n{'='*20}\nOrder Details:\n{items_str}\n{'-'*20}\nTotal with VAT: ${self.__total_with_vat:.2f}\n{'='*20}"
 
+# Test Cases
 
+# Test Case 1: Display Ebook Details
+ebook1 = Ebook("Make Programming Fun", "Jasem AlMeraikhi", "2022-01-01", "Programming", 29.99)
+ebook2 = Ebook("I Love Data Science", "Ibrahim Almarzooqi", "2021-05-15", "Data Science", 35.50)
+
+print("Test Case 1: Ebook Details")
+print("="*30)
+print(ebook1)
+print(ebook2)
+print("="*30 + "\n")
 
