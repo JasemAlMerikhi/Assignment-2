@@ -45,3 +45,11 @@ class ShoppingCart:
 
     def add_item(self, ebook):
         self._items.append(ebook)
+
+    def get_total_price(self):
+        return sum(item.get_price() for item in self._items)
+
+    def __str__(self):
+        items_st = "\n".join([str(item) for item in self._items])
+        return f"\nShopping Cart:\n{'-'*20}\n{items_str}\n{'-'*20}\nTotal Price: ${self.get_total_price():.2f}"
+
