@@ -1,0 +1,11 @@
+class Ebook:
+    """
+    Represents an e-book with title, author, publication date, genre, and price.
+    """
+
+    def __init__(self, title, author, publication_date, genre, price):
+        self.__title = title
+        self.__author = author
+        self.__publication_date = publication_date
+        self.__genre = genre
+        self.__price = price
