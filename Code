@@ -130,4 +130,8 @@ print("="*30)
 print(order)
 print("="*30 + "\n")
 print()
-
+# Test Case 4: Apply Discounts
+loyalty_discount = Discount("loyalty", 0.10)
+total_after_loyalty_discount = loyalty_discount.apply_discount(order)
+print("Test Case 4: Discount Applied")
+print(f"Loyalty Discount (10%): ${total_after_loyalty_discount:.2f}")
