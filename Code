@@ -81,3 +81,21 @@ class Discount:
 
     def apply_discount(self, order):
         return order.calculate_total() * (1 - self.__discount_rate)
+
+class Invoice:
+    """
+    Represents an invoice for an order, including VAT.
+    """
+    VAT_RATE = 0.08  # 8% VAT
+
+    def __init__(self, order):
+        self.__order = order
+        self.__total_with_vat = self.calculate_total_with_vat()
+
+    def calculate_total_with_vat(self):
+        return self.__order.calculate_total() * (1 + self.VAT_RATE)
+
+    def __str__(self):
+     items_str = "\n".join([str(item) for item in self.__order._items])
+        return f"\nInvoice:\n{'='*20}\nOrder Details:\n{items_str}\n{'-'*20}\nTotal with VAT: ${self.__total_with_vat:.2f}\n{'='*20}"
+
