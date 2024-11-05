@@ -96,6 +96,8 @@ class Invoice:
         return self.__order.calculate_total() * (1 + self.VAT_RATE)
 
     def __str__(self):
-     items_str = "\n".join([str(item) for item in self.__order._items])
+        items_str = "\n".join([str(item) for item in self.__order._items])
         return f"\nInvoice:\n{'='*20}\nOrder Details:\n{items_str}\n{'-'*20}\nTotal with VAT: ${self.__total_with_vat:.2f}\n{'='*20}"
+
+
 
